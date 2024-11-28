@@ -10,3 +10,13 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
+module.exports = {
+  settings: {
+      cors: {
+          enabled: true,
+          origin: ['http://localhost:3000'],  // Cambia esto al dominio de tu frontend
+      },
+  },
+};
+
