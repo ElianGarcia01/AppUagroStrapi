@@ -2,7 +2,9 @@ module.exports = {
   settings: {
     cors: {
       enabled: true,
-      origin: '*',  // Cambia esto al dominio de tu frontend
+      origin: [
+        'https://dgtidweb.uagro.mx', // Permitir solicitudes desde el dominio de tu frontend
+      ],  // Cambia esto al dominio de tu frontend
     },
   },
   // Configuración de middlewares
