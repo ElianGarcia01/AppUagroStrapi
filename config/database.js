@@ -6,18 +6,19 @@ module.exports = ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'), // Cambia a '127.0.0.1' si es necesario
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi_database'), // Usa el nombre de la base de datos que creaste
-        user: env('DATABASE_USERNAME', 'root'), // Usuario de MySQL
-        password: env('DATABASE_PASSWORD', ''), // Contraseña de MySQL (vacía para Laragon por defecto)
+        host: env('DATABASE_HOST', 'localhost'), // Cambia localhost por la IP o dominio del servidor remoto
+        port: env.int('DATABASE_PORT', 3306), // El puerto predeterminado de MySQL es 3306, pero puede cambiar según tu configuración
+        database: env('DATABASE_NAME', 'dbstrapi'), // Nombre de la base de datos
+        user: env('DATABASE_USERNAME', 'usrstrapi'), // Usuario de la base de datos
+        password: env('DATABASE_PASSWORD', 'admstrapi*/&'), // Contraseña de la base de datos
+
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
           ca: env('DATABASE_SSL_CA', undefined),
           capath: env('DATABASE_SSL_CAPATH', undefined),
           cipher: env('DATABASE_SSL_CIPHER', undefined),
-          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
+          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', false),
         },
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
