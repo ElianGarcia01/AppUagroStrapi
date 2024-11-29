@@ -1,9 +1,7 @@
 module.exports = [
-  // Configuración del middleware de CORS
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       origin: [
         'https://dgtidweb.uagro.mx', // Dominio principal
         'https://dgtidweb.uagro.mx/AppUagroNew', // Ruta específica del frontend
@@ -12,7 +10,7 @@ module.exports = [
     },
   },
 
-  // Otros middlewares por defecto de Strapi
+  // Otros middlewares
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
