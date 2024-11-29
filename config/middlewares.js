@@ -10,15 +10,35 @@ module.exports = {
     },
   },
   middleware: [
-    'strapi::logger',
-    'strapi::errors',
-    'strapi::security',
-    'strapi::cors', // Este es el middleware de CORS
-    'strapi::poweredBy',
-    'strapi::query',
-    'strapi::body',
-    'strapi::session',
-    'strapi::favicon',
-    'strapi::public',
+    {
+      name: 'strapi::logger',
+    },
+    {
+      name: 'strapi::errors',
+    },
+    {
+      name: 'strapi::security',
+    },
+    {
+      name: 'strapi::cors',
+    },
+    {
+      name: 'strapi::poweredBy',
+    },
+    {
+      name: 'strapi::query',
+    },
+    {
+      name: 'strapi::body',
+    },
+    {
+      name: 'strapi::session',
+    },
+    {
+      name: 'strapi::favicon',
+    },
+    {
+      name: 'strapi::public',
+    },
   ],
-}
+};
