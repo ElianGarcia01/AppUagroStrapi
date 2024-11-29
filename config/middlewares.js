@@ -3,16 +3,17 @@ module.exports = {
     cors: {
       enabled: true,
       origin: [
-        'https://dgtidweb.uagro.mx', // Permitir solicitudes desde el dominio de tu frontend
-      ],  // Cambia esto al dominio de tu frontend
+        'https://dgtidweb.uagro.mx', // Dominio principal
+        'https://dgtidweb.uagro.mx/AppUagroNew', // Ruta exacta del frontend
+        'http://dgtidweb.uagro.mx:1337', // Dominio del backend con puerto
+      ],
     },
   },
-  // Configuración de middlewares
   middleware: [
     'strapi::logger',
     'strapi::errors',
     'strapi::security',
-    'strapi::cors',  // Este es el middleware de CORS
+    'strapi::cors', // Este es el middleware de CORS
     'strapi::poweredBy',
     'strapi::query',
     'strapi::body',
@@ -20,4 +21,4 @@ module.exports = {
     'strapi::favicon',
     'strapi::public',
   ],
-};
+}
