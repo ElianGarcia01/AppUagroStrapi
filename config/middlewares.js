@@ -7,6 +7,7 @@ module.exports = [
         'https://dgtidweb.uagro.mx/AppUagroNew', // Ruta específica del frontend
         'http://dgtidweb.uagro.mx:1337', // Dominio del backend con puerto
       ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
     },
   },
 
