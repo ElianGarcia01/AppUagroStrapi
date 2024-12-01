@@ -2,11 +2,8 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: [
-        'https://dgtidweb.uagro.mx', // Dominio principal
-        'https://dgtidweb.uagro.mx/AppUagroNew', // Ruta específica del frontend
-        'http://dgtidweb.uagro.mx:1337', // Dominio del backend con puerto
-      ],
+      origin: ['https://dgtidweb.uagro.mx', 'https://www.dgtidweb.uagro.mx'],
+      headers: ['Content-Type', 'Authorization'],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
     },
   },
