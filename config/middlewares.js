@@ -2,7 +2,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://dgtidweb.uagro.mx', 'https://www.dgtidweb.uagro.mx'],
+      origin: ['*'],
       headers: ['Content-Type', 'Authorization'],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
     },
