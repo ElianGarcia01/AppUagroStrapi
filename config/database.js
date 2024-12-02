@@ -6,11 +6,11 @@ module.exports = ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'), // Cambia localhost por la IP o dominio del servidor remoto
-        port: env.int('DATABASE_PORT', 3306), // El puerto predeterminado de MySQL es 3306, pero puede cambiar según tu configuración
-        database: env('DATABASE_NAME', 'dbstrapi'), // Nombre de la base de datos
-        user: env('DATABASE_USERNAME', 'usrstrapi'), // Usuario de la base de datos
-        password: env('DATABASE_PASSWORD', 'admstrapi*/&'), // Contraseña de la base de datos
+        host: env('DATABASE_HOST'), // Cambia localhost por la IP o dominio del servidor remoto
+        port: env.int('DATABASE_PORT'), // El puerto predeterminado de MySQL es 3306, pero puede cambiar según tu configuración
+        database: env('DATABASE_NAME'), // Nombre de la base de datos
+        user: env('DATABASE_USERNAME'), // Usuario de la base de datos
+        password: env('DATABASE_PASSWORD'), // Contraseña de la base de datos
 
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
